@@ -57,6 +57,7 @@
     { "@type": "Language", "name": "French" }
   ],
   "knowsLanguage": ["en", "fr"],
+  "sameAs": ["https://maps.app.goo.gl/KxWfuFHCHUpErrmb9"],
   "serviceType": [
     "Airport transfer",
     "Cruise port transfer",
@@ -471,11 +472,14 @@
       </div>
 
       <!-- ================================================================
-           TODO (see CONTENT-TODO.md): replace the three quotes below with
-           real, verbatim reviews from Google / TripAdvisor / email.
-           Remove class="is-placeholder" from each <figure> once done.
-           Do NOT publish this page with the placeholder text in place.
+           The three quotes below are PLACEHOLDERS.
+
+           Don't edit them by hand. Put the real reviews in
+           content/reviews.json and run:   node tools/build-reviews.mjs
+           That rewrites everything between the REVIEWS markers here and on
+           reviews.html. See CONTENT-TODO.md.
            ================================================================ -->
+      <!-- REVIEWS:START -->
       <div class="grid grid--3">
         <figure class="quote is-placeholder">
           <div class="quote__stars" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -493,6 +497,7 @@
           <figcaption>Guest name <span>City, country &middot; Month Year</span></figcaption>
         </figure>
       </div>
+      <!-- REVIEWS:END -->
 
       <div class="btn-row mt-3">
         <a class="link-arrow" href="/reviews.html">Read more reviews <span aria-hidden="true">&rarr;</span></a>

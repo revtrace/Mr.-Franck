@@ -1,0 +1,43 @@
+{
+  "_README": [
+    "Real guest reviews for mrfranck.com. This file is the single source of truth.",
+    "After editing, run:  node tools/build-reviews.mjs",
+    "That regenerates the review cards on reviews.html and the featured three on index.html.",
+    "",
+    "Each review needs:",
+    "  text     - the review, VERBATIM. Do not tidy it up or write it yourself.",
+    "  name     - as the reviewer published it (first name + initial is fine).",
+    "  location - 'Manchester, UK'. Optional; omit if unknown, do not guess.",
+    "  date     - 'March 2026'. Optional; omit if unknown.",
+    "  rating   - 1 to 5.",
+    "  source   - 'Google', 'TripAdvisor' or 'Email'.",
+    "  featured - true on exactly three, which are the ones shown on the home page.",
+    "",
+    "Only publish reviews that were actually left. If a review came by private",
+    "email rather than a public profile, get the guest's permission first.",
+    "",
+    "aggregate: fill in ONLY from the real figures shown on the Google profile.",
+    "Leave it null until then - an invented star rating is a Google policy",
+    "violation and gets rich results suppressed."
+  ],
+
+  "aggregate": null,
+
+  "_aggregate_example": {
+    "ratingValue": 4.9,
+    "reviewCount": 63,
+    "url": "https://maps.app.goo.gl/KxWfuFHCHUpErrmb9"
+  },
+
+  "_review_example": {
+    "text": "Franck was waiting for us in arrivals even though our flight was two hours late. The price he quoted by WhatsApp was exactly what we paid.",
+    "name": "Sarah T.",
+    "location": "Leeds, UK",
+    "date": "June 2026",
+    "rating": 5,
+    "source": "Google",
+    "featured": true
+  },
+
+  "reviews": []
+}

@@ -70,6 +70,10 @@ flagged with a hatched background. Real reviews, real photography and a form
 endpoint are needed before launch. Nothing about a real business — testimonials,
 prices, licence numbers, biography — was invented to fill space.
 
+To add the real reviews, put them in `content/reviews.json` and run
+`node tools/build-reviews.mjs`. It rewrites both pages, and refuses to run on
+bad data rather than half-publishing.
+
 ---
 
 ## Structure
@@ -80,6 +84,8 @@ services.html         Airport · cruise · excursions · hourly · events · bus
 destinations.html     Route table with journey times + destination guides
 about.html            Franck, credentials, how he works
 reviews.html          Testimonials (placeholders — see CONTENT-TODO.md)
+content/reviews.json  Review data — the only file to edit when reviews change
+tools/build-reviews.mjs  Renders that data into reviews.html and index.html
 faq.html              Prices, arrivals, the car, booking (+ FAQPage schema)
 book.html             Booking form with WhatsApp fallback
 thank-you.html        Post-submission page

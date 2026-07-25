@@ -13,31 +13,52 @@ else on this list combined.
 ## 🔴 Blockers — do not launch without these
 
 ### 1. Real reviews
-**Files:** `reviews.html`, `index.html` (the "What guests say" section)
+**Files:** `content/reviews.json` (the only file to edit)
 
-Every quote on both pages is placeholder text and is visually flagged with
-`class="is-placeholder"` (a hatched background and dashed outline) so it cannot
-be published by accident.
+Every quote currently on `reviews.html` and `index.html` is placeholder text,
+visually flagged with `class="is-placeholder"` (a hatched background and dashed
+outline) so it cannot be published by accident.
 
-- Replace each `<blockquote>` with a **verbatim** review from Google Business
-  Profile, TripAdvisor, or a guest email used with permission.
-- Fill in the `<figcaption>` with a real first name, city/country and month.
-- Delete `class="is-placeholder"` from each `<figure>` once filled.
+**Don't edit the HTML.** Paste the reviews into `content/reviews.json`, then run:
+
+```bash
+node tools/build-reviews.mjs
+```
+
+That regenerates the cards on `reviews.html` and the featured three on
+`index.html`, converts quotes and dashes to match the site's typography, and
+adds the `AggregateRating` schema — but only if you fill in the `aggregate`
+object with the **real** rating and review count from the Google profile.
+
+Rules that matter:
+
+- Reviews must be **verbatim**. Don't tidy them up or write them yourself.
+- Mark exactly three as `"featured": true` — those are the home-page three.
 - If there are only three good reviews, ship three. Three real ones beat six
   invented ones, and invented ones are a legal and reputational risk.
+- Never invent the star rating. A fabricated `AggregateRating` breaches
+  Google's review-snippet policy and gets rich results suppressed site-wide.
 
-**Do not** add an `AggregateRating` schema block (a star rating in Google
-results) until there is a real, verifiable rating to point at. There's a note
-where it would go in `reviews.html`.
+The script refuses to run on invalid JSON or a review with no rating, and does
+nothing at all if the array is empty — it can't blank the pages by accident.
 
-### 2. A Google Business Profile
-Not a file change — the single highest-leverage marketing action available.
+**Source:** Franck's Google Business Profile —
+<https://maps.app.goo.gl/KxWfuFHCHUpErrmb9>
 
-Franck's competitors on the Côte d'Azur rank in the Google map pack for
-"private driver Nice airport" and similar. A free Business Profile, with
-photos and a steady trickle of reviews, is how a one-man operation competes
-with the transfer aggregators. Once it exists, link it from `reviews.html`
-(there's a TODO comment marking the spot).
+### 2. ~~A Google Business Profile~~ ✅ Already exists
+
+Franck's profile is live at <https://maps.app.goo.gl/KxWfuFHCHUpErrmb9> and is
+now linked from `reviews.html` (both "read every review" and "leave a review")
+and referenced in the homepage `sameAs` structured data.
+
+Two small follow-ups:
+
+- Swap the `sameAs` value in `index.html` for the **full** canonical Google
+  Maps URL rather than the `maps.app.goo.gl` short link — search engines
+  associate entities more reliably with the canonical form.
+- Keep asking guests for reviews. A steady trickle is what holds a one-man
+  operation in the map pack against the transfer aggregators, and it's the
+  cheapest marketing available to him.
 
 ### 3. Photography
 **Files:** `assets/img/`
