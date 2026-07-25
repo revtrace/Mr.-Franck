@@ -65,14 +65,15 @@ text on light backgrounds uses a darker `--brass-ink`).
 
 Read **[CONTENT-TODO.md](CONTENT-TODO.md)** first.
 
-The reviews on `index.html` and `reviews.html` are **placeholders**, visually
-flagged with a hatched background. Real reviews, real photography and a form
-endpoint are needed before launch. Nothing about a real business — testimonials,
-prices, licence numbers, biography — was invented to fill space.
+Reviews are **real and live** — four verbatim from Franck's Google profile, with
+his 5.0 rating in the trust bar. Still needed before launch: **photography**
+(above all a photo of Franck himself), a **form endpoint**, and ideally
+**published prices**. Nothing about a real business — testimonials, prices,
+licence numbers, biography — was invented to fill space.
 
-To add the real reviews, put them in `content/reviews.json` and run
-`node tools/build-reviews.mjs`. It rewrites both pages, and refuses to run on
-bad data rather than half-publishing.
+To change reviews, edit `content/reviews.json` and run
+`node tools/build-reviews.mjs`. It rewrites both pages plus the rating tile and
+schema, and refuses to run on bad data rather than half-publishing.
 
 ---
 

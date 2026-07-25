@@ -845,6 +845,18 @@ hr {
 }
 .quote figcaption span { display: block; font-weight: 400; letter-spacing: .04em; text-transform: none; margin-top: .3rem; }
 
+/* Reviews page: column-packed rather than a rigid grid, so any number of
+   reviews sits tidily and quotes of different lengths don't leave holes. */
+.quotes {
+  columns: 3 300px;
+  column-gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+.quotes .quote {
+  break-inside: avoid;
+  height: auto;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .quote--dark { background: var(--ink-2); border-color: var(--line-dark); border-left-color: var(--brass); }
 .quote--dark blockquote { color: #fff; }
 .quote--dark figcaption { color: var(--text-dark-soft); }

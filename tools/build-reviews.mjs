@@ -80,7 +80,7 @@ const smarten = (s) =>
 
 const card = (r) => {
   const stars = '&#9733;'.repeat(r.rating) + '&#9734;'.repeat(5 - r.rating);
-  const meta = [r.location, r.date].filter(Boolean).map(esc).join(' &middot; ');
+  const meta = [r.location, r.date, r.note].filter(Boolean).map(esc).join(' &middot; ');
   const src = r.source ? `<span class="visually-hidden"> (via ${esc(r.source)})</span>` : '';
   return `        <figure class="quote">
           <div class="quote__stars" aria-label="${r.rating} out of 5">${stars}</div>
@@ -89,30 +89,57 @@ const card = (r) => {
         </figure>`;
 };
 
-const grid = (list) =>
-  `${START}\n      <div class="grid grid--3">\n${list.map(card).join('\n')}\n      </div>\n      ${END}`;
+// The home page shows exactly three, so an equal-height 3-up grid is right.
+// The reviews page shows however many exist, so it packs into columns.
+const grid = (list, wrapper) =>
+  `${START}\n      <div class="${wrapper}">\n${list.map(card).join('\n')}\n      </div>\n      ${END}`;
 
 /* ---------- write ---------------------------------------------------- */
 
-const inject = (file, list) => {
+const inject = (file, list, wrapper) => {
   const full = path.join(root, file);
   if (!fs.existsSync(full)) die(`Can't find ${file}`);
   const html = fs.readFileSync(full, 'utf8');
   const a = html.indexOf(START);
   const b = html.indexOf(END);
   if (a === -1 || b === -1) die(`${file} is missing the ${START} / ${END} markers.`);
-  const out = html.slice(0, a) + grid(list) + html.slice(b + END.length);
+  const out = html.slice(0, a) + grid(list, wrapper) + html.slice(b + END.length);
   fs.writeFileSync(full, out);
   console.log(`  ✓ ${file} — ${list.length} review${list.length === 1 ? '' : 's'}`);
 };
 
 console.log('\nBuilding reviews…');
-inject('reviews.html', reviews);
-inject('index.html', homeThree);
+inject('reviews.html', reviews, 'quotes');
+inject('index.html', homeThree, 'grid grid--3');
 
-/* ---------- aggregate rating schema ---------------------------------- */
+/* ---------- aggregate rating: home-page stat + schema ---------------- */
 
 const agg = data.aggregate;
+
+// The rating tile in the home-page trust bar. Generated from the same figures
+// as the schema below, so the two can never drift apart.
+{
+  const file = path.join(root, 'index.html');
+  let html = fs.readFileSync(file, 'utf8');
+  const A = '<!-- RATING:START -->';
+  const B = '<!-- RATING:END -->';
+  const a = html.indexOf(A);
+  const b = html.indexOf(B);
+  if (a !== -1 && b !== -1) {
+    const tile = (agg && agg.ratingValue && agg.reviewCount)
+      ? `\n        <div class="trustbar__item">\n` +
+        `          <div class="trustbar__stat">${Number(agg.ratingValue).toFixed(1)}</div>\n` +
+        `          <div class="trustbar__label">From ${agg.reviewCount}<br>Google reviews</div>\n` +
+        `        </div>\n        `
+      : '';
+    html = html.slice(0, a + A.length) + tile + html.slice(b);
+    fs.writeFileSync(file, html);
+    console.log(agg && agg.ratingValue
+      ? `  ✓ index.html — trust-bar rating tile (${Number(agg.ratingValue).toFixed(1)} / ${agg.reviewCount})`
+      : '  · index.html — no rating tile (no aggregate figures set)');
+  }
+}
+
 if (agg && agg.ratingValue && agg.reviewCount) {
   const ld = {
     '@context': 'https://schema.org',

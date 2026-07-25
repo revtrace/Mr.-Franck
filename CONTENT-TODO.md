@@ -12,35 +12,42 @@ else on this list combined.
 
 ## 🔴 Blockers — do not launch without these
 
-### 1. Real reviews
-**Files:** `content/reviews.json` (the only file to edit)
+### 1. ~~Real reviews~~ ✅ Done — four live, one parked
 
-Every quote currently on `reviews.html` and `index.html` is placeholder text,
-visually flagged with `class="is-placeholder"` (a hatched background and dashed
-outline) so it cannot be published by accident.
+Four verbatim Google reviews are live (Marie De Munck, Jennifer Grais, Brad
+Littlefield, Sigurrós Elín Birgisdóttir). All placeholders are gone. The
+reported rating — **5.0 from 20 reviews** — now appears in the home-page trust
+bar and as `AggregateRating` schema.
 
-**Don't edit the HTML.** Paste the reviews into `content/reviews.json`, then run:
+To add or change reviews, edit `content/reviews.json` and run:
 
 ```bash
 node tools/build-reviews.mjs
 ```
 
-That regenerates the cards on `reviews.html` and the featured three on
-`index.html`, converts quotes and dashes to match the site's typography, and
-adds the `AggregateRating` schema — but only if you fill in the `aggregate`
-object with the **real** rating and review count from the Google profile.
+Never edit the cards in the HTML directly — they're regenerated and your edits
+would be overwritten.
 
-Rules that matter:
+**Two things still outstanding:**
 
-- Reviews must be **verbatim**. Don't tidy them up or write them yourself.
-- Mark exactly three as `"featured": true` — those are the home-page three.
-- If there are only three good reviews, ship three. Three real ones beat six
-  invented ones, and invented ones are a legal and reputational risk.
-- Never invent the star rating. A fabricated `AggregateRating` breaches
-  Google's review-snippet policy and gets rich results suppressed site-wide.
+- **A fifth review is parked in `_pending`.** It's an excellent, detailed one
+  (Èze and Monaco, "it became a mini-city tour"), but the reviewer's name was
+  scrolled off the top of the screenshot it came from. Add the name, move the
+  object into the `reviews` array, re-run the build. It's long, so consider
+  trimming to its two strongest sentences — and note "Eza" is Google's
+  mistranslation of Èze, so trim rather than silently correct it, since an
+  edited quote stops being verbatim.
+- **Verify 5.0 / 20 against the profile before launch.** That figure came from
+  a message, not from reading the profile, and it's a point-in-time number that
+  drifts as reviews come in. It lives in one place — the `aggregate` object in
+  `content/reviews.json` — and the build keeps the trust-bar tile and the schema
+  in sync from it.
 
-The script refuses to run on invalid JSON or a review with no rating, and does
-nothing at all if the array is empty — it can't blank the pages by accident.
+**One honest caveat on the star rating.** Google treats reviews about a business
+republished on that business's own site as "self-serving", and generally will
+*not* show star ratings in search results for them. The markup is accurate and
+does no harm, but don't expect stars in the SERP from it. The rating earns its
+keep on the page itself, where visitors see it.
 
 **Source:** Franck's Google Business Profile —
 <https://maps.app.goo.gl/KxWfuFHCHUpErrmb9>

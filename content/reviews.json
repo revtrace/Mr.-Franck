@@ -6,9 +6,11 @@
     "",
     "Each review needs:",
     "  text     - the review, VERBATIM. Do not tidy it up or write it yourself.",
-    "  name     - as the reviewer published it (first name + initial is fine).",
-    "  location - 'Manchester, UK'. Optional; omit if unknown, do not guess.",
-    "  date     - 'March 2026'. Optional; omit if unknown.",
+    "  name     - as the reviewer published it.",
+    "  location - 'Manchester, UK'. Optional. Google does not show reviewer location,",
+    "             so this is usually omitted. Never guess it from someone's name.",
+    "  date     - 'March 2026'. Optional. Use the 'Visited in' month Google shows.",
+    "  note     - Optional extra meta, e.g. 'Translated from Chinese'.",
     "  rating   - 1 to 5.",
     "  source   - 'Google', 'TripAdvisor' or 'Email'.",
     "  featured - true on exactly three, which are the ones shown on the home page.",
@@ -21,23 +23,56 @@
     "violation and gets rich results suppressed."
   ],
 
-  "aggregate": null,
-
-  "_aggregate_example": {
-    "ratingValue": 4.9,
-    "reviewCount": 63,
-    "url": "https://maps.app.goo.gl/KxWfuFHCHUpErrmb9"
+  "aggregate": {
+    "ratingValue": 5,
+    "reviewCount": 20,
+    "url": "https://maps.app.goo.gl/KxWfuFHCHUpErrmb9",
+    "_source": "Reported by Kris, July 2026: 20 reviews, all 5 stars. Re-check on the profile before launch, and refresh as new reviews come in."
   },
 
-  "_review_example": {
-    "text": "Franck was waiting for us in arrivals even though our flight was two hours late. The price he quoted by WhatsApp was exactly what we paid.",
-    "name": "Sarah T.",
-    "location": "Leeds, UK",
-    "date": "June 2026",
-    "rating": 5,
-    "source": "Google",
-    "featured": true
-  },
+  "reviews": [
+    {
+      "text": "Very good service, nice big car with lots of space for many suitcases. Asks you what music you like or if you prefer no music - gave us some extra info about the places we were driving through on our way to the airport. Perfect ending for our trip, thank you!",
+      "name": "Marie De Munck",
+      "date": "June 2025",
+      "rating": 5,
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "text": "A 5 star driver who speaks perfect English, and offers half day or full day rides and tours. We appreciated his driving as well as his charming consideration. We are only sad to have met him at the end of our time in France!",
+      "name": "Jennifer Grais",
+      "date": "June 2025",
+      "rating": 5,
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "text": "A delightful experience. Clearly a hospitality professional. Certainly would not hesitate to book again for airport transfers, or even a day of local tours!",
+      "name": "Brad Littlefield",
+      "date": "May 2025",
+      "rating": 5,
+      "source": "Google",
+      "featured": true
+    },
+    {
+      "text": "Wonderful driver who speaks perfect english and we had great conversation on the way to the airport!",
+      "name": "Sigurrós Elín Birgisdóttir",
+      "date": "July 2025",
+      "rating": 5,
+      "source": "Google"
+    }
+  ],
 
-  "reviews": []
+  "_pending": [
+    {
+      "_why": "PARKED — the reviewer's name was scrolled off the top of the screenshot. Add the name, move this object into the reviews array above, and re-run the build. Two suggestions when you do: (1) it is long, so consider trimming to the two strongest sentences — the mini-city-tour line and the punctuality line; (2) 'Eza' is Google's mistranslation of Èze, so trim rather than silently correct it, since edited quotes stop being verbatim.",
+      "text": "Franck was incredibly professional, reliable, and enthusiastic. His vehicle was spotless, and his driving was smooth and safe. Impressively, during the journey to Eza and Monaco, Franck enthusiastically introduced us to the scenery and landmarks along the way, giving me a deeper understanding of the city. He knowledgeably pointed out beautiful sights and historical buildings I might have missed, making this ride more than just transportation; it became a mini-city tour. He maintained appropriate communication throughout, being friendly without being overly intrusive. He arrived at the pick-up point on time and knew the route well, helping me reach my destination efficiently. I am very grateful to Franck for providing a pleasant ride and highly recommend him as a driver.",
+      "name": "",
+      "date": "November 2025",
+      "note": "Translated from Chinese",
+      "rating": 5,
+      "source": "Google"
+    }
+  ]
 }
