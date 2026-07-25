@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-label="Provence hills at sunset" preserveAspectRatio="xMidYMid slice">
+<title>Provence hills at sunset</title>
+<defs>
+<linearGradient id="sky_dest-provence_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#141118"/>
+<stop offset="0.5" stop-color="#4a2f45"/>
+<stop offset="1" stop-color="#96688a"/>
+</linearGradient>
+<linearGradient id="sea_dest-provence_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#4a2f45"/>
+<stop offset="1" stop-color="#141118"/>
+</linearGradient>
+<radialGradient id="glow_dest-provence_svg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffcfa0" stop-opacity=".85"/><stop offset="0.45" stop-color="#ffcfa0" stop-opacity=".22"/><stop offset="1" stop-color="#ffcfa0" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="900" fill="url(#sky_dest-provence_svg)"/>
+<circle cx="455" cy="218" r="1.1" fill="#fff" opacity="0.19"/>
+<circle cx="751" cy="77" r="1.0" fill="#fff" opacity="0.42"/>
+<circle cx="545" cy="435" r="0.8" fill="#fff" opacity="0.06"/>
+<circle cx="274" cy="63" r="0.6" fill="#fff" opacity="0.34"/>
+<circle cx="268" cy="278" r="1.5" fill="#fff" opacity="0.29"/>
+<circle cx="701" cy="159" r="0.9" fill="#fff" opacity="0.39"/>
+<circle cx="211" cy="396" r="0.7" fill="#fff" opacity="0.09"/>
+<circle cx="502" cy="461" r="1.2" fill="#fff" opacity="0.08"/>
+<circle cx="314" cy="168" r="1.4" fill="#fff" opacity="0.28"/>
+<circle cx="648" cy="47" r="0.6" fill="#fff" opacity="0.31"/>
+<circle cx="276" cy="128" r="1.3" fill="#fff" opacity="0.43"/>
+<circle cx="202" cy="48" r="0.7" fill="#fff" opacity="0.21"/>
+<circle cx="652" cy="183" r="1.5" fill="#fff" opacity="0.10"/>
+<circle cx="482" cy="64" r="1.3" fill="#fff" opacity="0.28"/>
+<circle cx="217" cy="280" r="1.4" fill="#fff" opacity="0.08"/>
+<circle cx="207" cy="433" r="0.9" fill="#fff" opacity="0.04"/>
+<circle cx="838" cy="455" r="0.9" fill="#fff" opacity="0.04"/>
+<circle cx="24" cy="356" r="1.3" fill="#fff" opacity="0.16"/>
+<circle cx="622" cy="170" r="0.8" fill="#fff" opacity="0.28"/>
+<circle cx="714" cy="226" r="1.0" fill="#fff" opacity="0.19"/>
+<circle cx="740" cy="459" r="0.8" fill="#fff" opacity="0.09"/>
+<circle cx="732" cy="194" r="0.8" fill="#fff" opacity="0.29"/>
+<circle cx="488" cy="284" r="1.5" fill="#fff" opacity="0.28"/>
+<circle cx="633" cy="249" r="0.7" fill="#fff" opacity="0.10"/>
+<circle cx="738" cy="123" r="1.2" fill="#fff" opacity="0.22"/>
+<circle cx="193" cy="328" r="0.7" fill="#fff" opacity="0.07"/>
+<circle cx="896" cy="192" r="0.9" fill="#fff" opacity="0.33"/>
+<circle cx="190" cy="381" r="0.7" fill="#fff" opacity="0.14"/>
+<circle cx="677" cy="52" r="0.9" fill="#fff" opacity="0.48"/>
+<circle cx="442" cy="207" r="0.6" fill="#fff" opacity="0.14"/>
+<circle cx="852" cy="475" r="1.0" fill="#fff" opacity="0.05"/>
+<circle cx="119" cy="454" r="1.1" fill="#fff" opacity="0.08"/>
+<circle cx="772" cy="115" r="1.2" fill="#fff" opacity="0.28"/>
+<circle cx="273" cy="83" r="1.2" fill="#fff" opacity="0.20"/>
+<circle cx="150" cy="183" r="0.9" fill="#fff" opacity="0.23"/>
+<circle cx="201" cy="468" r="0.6" fill="#fff" opacity="0.07"/>
+<circle cx="679" cy="220" r="0.8" fill="#fff" opacity="0.31"/>
+<circle cx="673" cy="119" r="1.4" fill="#fff" opacity="0.34"/>
+<circle cx="155" cy="459" r="0.9" fill="#fff" opacity="0.03"/>
+<circle cx="862" cy="362" r="1.0" fill="#fff" opacity="0.13"/>
+<circle cx="456" cy="243" r="0.6" fill="#fff" opacity="0.24"/>
+<circle cx="321" cy="80" r="0.9" fill="#fff" opacity="0.28"/>
+<circle cx="48" cy="136" r="0.8" fill="#fff" opacity="0.16"/>
+<circle cx="381" cy="25" r="1.0" fill="#fff" opacity="0.29"/>
+<circle cx="263" cy="314" r="1.1" fill="#fff" opacity="0.09"/>
+<circle cx="106" cy="315" r="0.9" fill="#fff" opacity="0.09"/>
+<circle cx="180" cy="420" r="378" fill="url(#glow_dest-provence_svg)"/>
+<circle cx="180" cy="420" r="40" fill="#ffcfa0" opacity=".9"/>
+<rect y="600" width="900" height="300" fill="url(#sea_dest-provence_svg)"/>
+<rect x="119" y="606" width="59" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.19"/>
+<rect x="120" y="625" width="180" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.18"/>
+<rect x="75" y="669" width="119" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.15"/>
+<rect x="117" y="701" width="48" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.14"/>
+<rect x="152" y="743" width="93" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.11"/>
+<rect x="133" y="763" width="62" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.10"/>
+<rect x="68" y="798" width="150" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.08"/>
+<rect x="126" y="821" width="178" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.07"/>
+<rect x="78" y="853" width="184" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.06"/>
+<rect x="87" y="885" width="162" height="1.4" rx="0.7" fill="#ffcfa0" opacity="0.04"/>
+<path d="M -20 920 L -20 600.0 C 34.6 600.0 34.6 585.9 69.2 585.9 C 103.8 585.9 103.8 548.2 138.5 548.2 C 173.1 548.2 173.1 503.9 207.7 503.9 C 242.3 503.9 242.3 561.4 276.9 561.4 C 311.5 561.4 311.5 563.3 346.2 563.3 C 380.8 563.3 380.8 538.1 415.4 538.1 C 450.0 538.1 450.0 463.6 484.6 463.6 C 519.2 463.6 519.2 556.1 553.8 556.1 C 588.5 556.1 588.5 482.1 623.1 482.1 C 657.7 482.1 657.7 506.0 692.3 506.0 C 726.9 506.0 726.9 574.4 761.5 574.4 C 796.2 574.4 796.2 560.0 830.8 560.0 C 865.4 560.0 865.4 600.0 900.0 600.0 L 920 600.0 L 920 920 Z" fill="#141118" opacity="0.72"/>
+<path d="M -20 920 L -20 675.0 C 34.6 675.0 34.6 610.2 69.2 610.2 C 103.8 610.2 103.8 650.8 138.5 650.8 C 173.1 650.8 173.1 606.5 207.7 606.5 C 242.3 606.5 242.3 577.1 276.9 577.1 C 311.5 577.1 311.5 488.8 346.2 488.8 C 380.8 488.8 380.8 571.6 415.4 571.6 C 450.0 571.6 450.0 527.4 484.6 527.4 C 519.2 527.4 519.2 631.7 553.8 631.7 C 588.5 631.7 588.5 618.4 623.1 618.4 C 657.7 618.4 657.7 550.9 692.3 550.9 C 726.9 550.9 726.9 592.3 761.5 592.3 C 796.2 592.3 796.2 613.0 830.8 613.0 C 865.4 613.0 865.4 675.0 900.0 675.0 L 920 675.0 L 920 920 Z" fill="#141118" opacity="0.88"/>
+<path d="M -20 920 L -20 785.0 C 34.6 785.0 34.6 695.5 69.2 695.5 C 103.8 695.5 103.8 656.6 138.5 656.6 C 173.1 656.6 173.1 615.4 207.7 615.4 C 242.3 615.4 242.3 567.1 276.9 567.1 C 311.5 567.1 311.5 587.5 346.2 587.5 C 380.8 587.5 380.8 549.5 415.4 549.5 C 450.0 549.5 450.0 691.3 484.6 691.3 C 519.2 691.3 519.2 583.4 553.8 583.4 C 588.5 583.4 588.5 635.1 623.1 635.1 C 657.7 635.1 657.7 699.4 692.3 699.4 C 726.9 699.4 726.9 698.3 761.5 698.3 C 796.2 698.3 796.2 741.4 830.8 741.4 C 865.4 741.4 865.4 785.0 900.0 785.0 L 920 785.0 L 920 920 Z" fill="#060c12" opacity="1.0"/>
+</svg>

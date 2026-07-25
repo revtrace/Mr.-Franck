@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="Vehicle placeholder — replace with a photograph of the car" preserveAspectRatio="xMidYMid slice">
+<title>Vehicle placeholder — replace with a photograph of the car</title>
+<defs>
+<linearGradient id="sky_vehicle_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#0c161f"/>
+<stop offset="0.5" stop-color="#1c3446"/>
+<stop offset="1" stop-color="#59636a"/>
+</linearGradient>
+<linearGradient id="sea_vehicle_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#25404e"/>
+<stop offset="1" stop-color="#0b141c"/>
+</linearGradient>
+<radialGradient id="glow_vehicle_svg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#dccaa8" stop-opacity=".85"/><stop offset="0.45" stop-color="#dccaa8" stop-opacity=".22"/><stop offset="1" stop-color="#dccaa8" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1400" height="900" fill="url(#sky_vehicle_svg)"/>
+<circle cx="400" cy="380" r="378" fill="url(#glow_vehicle_svg)"/>
+<circle cx="400" cy="380" r="40" fill="#dccaa8" opacity=".9"/>
+<rect y="600" width="1400" height="300" fill="url(#sea_vehicle_svg)"/>
+<rect x="427" y="606" width="69" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.19"/>
+<rect x="343" y="644" width="107" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.17"/>
+<rect x="282" y="672" width="242" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.15"/>
+<rect x="308" y="697" width="175" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.14"/>
+<rect x="259" y="715" width="192" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.13"/>
+<rect x="367" y="754" width="194" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.11"/>
+<rect x="270" y="774" width="146" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.10"/>
+<rect x="343" y="818" width="102" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.07"/>
+<rect x="319" y="863" width="66" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.05"/>
+<rect x="343" y="891" width="193" height="1.4" rx="0.7" fill="#dccaa8" opacity="0.03"/>
+<path d="M -20 920 L -20 600.0 C 53.8 600.0 53.8 562.6 107.7 562.6 C 161.5 562.6 161.5 596.6 215.4 596.6 C 269.2 596.6 269.2 496.2 323.1 496.2 C 376.9 496.2 376.9 492.8 430.8 492.8 C 484.6 492.8 484.6 466.5 538.5 466.5 C 592.3 466.5 592.3 542.8 646.2 542.8 C 700.0 542.8 700.0 552.4 753.8 552.4 C 807.7 552.4 807.7 580.7 861.5 580.7 C 915.4 580.7 915.4 559.1 969.2 559.1 C 1023.1 559.1 1023.1 591.2 1076.9 591.2 C 1130.8 591.2 1130.8 536.0 1184.6 536.0 C 1238.5 536.0 1238.5 573.7 1292.3 573.7 C 1346.2 573.7 1346.2 600.0 1400.0 600.0 L 1420 600.0 L 1420 920 Z" fill="#122430" opacity="0.92"/>
+<path d="M -20 920 L -20 730.0 C 53.8 730.0 53.8 686.6 107.7 686.6 C 161.5 686.6 161.5 650.7 215.4 650.7 C 269.2 650.7 269.2 650.7 323.1 650.7 C 376.9 650.7 376.9 575.3 430.8 575.3 C 484.6 575.3 484.6 673.9 538.5 673.9 C 592.3 673.9 592.3 613.1 646.2 613.1 C 700.0 613.1 700.0 563.9 753.8 563.9 C 807.7 563.9 807.7 593.3 861.5 593.3 C 915.4 593.3 915.4 566.6 969.2 566.6 C 1023.1 566.6 1023.1 664.5 1076.9 664.5 C 1130.8 664.5 1130.8 671.0 1184.6 671.0 C 1238.5 671.0 1238.5 696.7 1292.3 696.7 C 1346.2 696.7 1346.2 730.0 1400.0 730.0 L 1420 730.0 L 1420 920 Z" fill="#070e15" opacity="1.0"/>
+</svg>

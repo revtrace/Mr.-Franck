@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a Fixed Price — Book Your Riviera Driver | Mr. Franck</title>
+<meta name="description" content="Send your dates and Franck replies with one fixed, all-in price — usually within the hour. No deposit, no account, no surge pricing. WhatsApp +33 6 14 70 30 77.">
+<link rel="canonical" href="https://www.mrfranck.com/book.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Get a Fixed Price — Mr. Franck, Private Driver of the French Riviera">
+<meta property="og:description" content="Send your dates and get one fixed, all-in price back, usually within the hour. No deposit.">
+<meta property="og:url" content="https://www.mrfranck.com/book.html">
+<meta property="og:image" content="https://www.mrfranck.com/assets/img/hero-riviera.svg">
+<meta name="theme-color" content="#0d151d">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="/">
+      <span class="brand__name">Mr. Franck</span>
+      <span class="brand__tag">Private driver &middot; French Riviera</span>
+    </a>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="/services.html">Services</a></li>
+        <li><a class="nav__link" href="/destinations.html">Routes &amp; destinations</a></li>
+        <li><a class="nav__link" href="/about.html">About Franck</a></li>
+        <li><a class="nav__link" href="/reviews.html">Reviews</a></li>
+        <li><a class="nav__link" href="/faq.html">FAQ</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm" href="/book.html" aria-current="page">Get a fixed price</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Book</p>
+      <h1>Send your dates. Get one fixed price back.</h1>
+      <p class="lead">
+        Usually within the hour. Nothing to pay now, no account to create, and no
+        obligation if the price doesn't suit you.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid--form">
+
+        <!-- ===== FORM ===== -->
+        <div class="form-card">
+          <h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">Tell Franck about the journey</h2>
+          <p class="muted small" style="margin-bottom:2rem">
+            Fields marked <span class="req">*</span> are the ones he needs to price it.
+            Everything else just makes the day run better.
+          </p>
+
+          <!-- ================================================================
+               TODO (see CONTENT-TODO.md): set the form endpoint below.
+               Replace action="REPLACE_WITH_FORM_ENDPOINT" with a Formspree,
+               Netlify Forms or Basin endpoint that emails Franck.
+               Until then the form gracefully composes a pre-filled WhatsApp
+               message instead — it never silently fails.
+               ================================================================ -->
+          <form id="booking-form" action="REPLACE_WITH_FORM_ENDPOINT" method="POST">
+            <input type="hidden" name="_subject" value="New booking enquiry — mrfranck.com">
+            <input type="hidden" name="_next" value="https://www.mrfranck.com/thank-you.html">
+            <div class="hp" aria-hidden="true">
+              <label for="company">Leave this empty</label>
+              <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="field">
+              <label for="service">What do you need? <span class="req">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Choose one&hellip;</option>
+                <option>Airport transfer</option>
+                <option>Cruise port day</option>
+                <option>Day trip / excursion</option>
+                <option>Hourly / daily hire</option>
+                <option>Event / wedding</option>
+                <option>Business travel</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="pickup">Picking up from <span class="req">*</span></label>
+                <input type="text" id="pickup" name="pickup" required
+                       placeholder="e.g. Nice Airport Terminal 2" autocomplete="off">
+              </div>
+              <div class="field">
+                <label for="dropoff">Going to <span class="req">*</span></label>
+                <input type="text" id="dropoff" name="dropoff" required
+                       placeholder="e.g. Hotel Martinez, Cannes" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="date">Date <span class="req">*</span></label>
+                <input type="date" id="date" name="date" required>
+              </div>
+              <div class="field">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time">
+                <span class="hint">Local French time. For flights, use the landing time.</span>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="passengers">Passengers <span class="req">*</span></label>
+                <select id="passengers" name="passengers" required>
+                  <option value="">Choose&hellip;</option>
+                  <option>1</option><option>2</option><option>3</option>
+                  <option>4</option><option>5</option><option>6</option>
+                  <option>7 or more</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="luggage">Large suitcases</label>
+                <select id="luggage" name="luggage">
+                  <option value="">Choose&hellip;</option>
+                  <option>None / hand luggage only</option>
+                  <option>1&ndash;2</option><option>3&ndash;4</option>
+                  <option>5 or more</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="flight">Flight, train or ship number</label>
+              <input type="text" id="flight" name="flight" placeholder="e.g. BA342, or MSC Seaview" autocomplete="off">
+              <span class="hint">If you give Franck this, he tracks it and adjusts for delays at no extra cost.</span>
+            </div>
+
+            <hr>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Your name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                       placeholder="you@example.com">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone or WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel"
+                     placeholder="Include your country code">
+              <span class="hint">The fastest way to get an answer, and how Franck reaches you on the day.</span>
+            </div>
+
+            <div class="field">
+              <label for="notes">Anything else?</label>
+              <textarea id="notes" name="notes"
+                        placeholder="Child seats, a return journey, extra stops, a wheelchair, somewhere good for lunch — tell him here."></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">Send and get my price</button>
+
+            <p class="small muted" style="margin-top:1.25rem">
+              No deposit and no card details. Franck replies personally, usually within the
+              hour &mdash; and always the same day. Your details are used only to answer this
+              enquiry.
+            </p>
+          </form>
+        </div>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="stack">
+          <div class="card">
+            <span class="badge">Fastest route</span>
+            <h3 style="margin-top:1rem">Prefer to just message?</h3>
+            <p>
+              Most guests do. Send the date, the flight number and how many of you there
+              are &mdash; that's enough for a price.
+            </p>
+            <div class="btn-row" style="margin-top:1.25rem">
+              <a class="btn btn--wa btn--block" href="https://wa.me/33614703077?text=Hello%20Franck%2C%20I%27d%20like%20a%20price%20for%20a%20ride%20on%20the%20Riviera." target="_blank" rel="noopener">
+                <span>WhatsApp Franck</span>
+              </a>
+            </div>
+            <div class="btn-row" style="margin-top:.75rem">
+              <a class="btn btn--dark btn--block" href="tel:+33614703077">Call +33 6 14 70 30 77</a>
+            </div>
+            <p class="small muted" style="margin-top:1rem">
+              Also on Telegram at the same number. English or French.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>What happens next</h3>
+            <ol class="small" style="color:var(--text-soft);padding-left:1.1em;margin-bottom:0">
+              <li>Franck reads it himself &mdash; no bot, no call centre.</li>
+              <li>You get one flat, all-in price, in writing.</li>
+              <li>Happy? Confirm by reply. That's the booking done.</li>
+              <li>He reconfirms the day before with his direct number.</li>
+              <li>Pay at the end, by card or cash.</li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <h3>Good to know</h3>
+            <ul class="checklist small" style="margin-bottom:0">
+              <li>Prices include tolls, parking and airport access.</li>
+              <li>Priced per car, not per person.</li>
+              <li>Child and booster seats at no extra charge &mdash; just ask.</li>
+              <li>Flight delays are tracked and absorbed.</li>
+              <li>Event weeks (Cannes, the Grand Prix) book out months ahead.</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <span class="brand__name">Mr. Franck</span>
+        <p>
+          Licensed private driver on the French Riviera. Airport transfers, cruise days
+          and excursions from Nice to Saint-Tropez, Monaco and the Italian border.
+        </p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services.html#airport">Airport transfers</a></li>
+          <li><a href="/services.html#cruise">Cruise port days</a></li>
+          <li><a href="/services.html#excursions">Day trips</a></li>
+          <li><a href="/services.html#hourly">Hourly &amp; daily hire</a></li>
+          <li><a href="/services.html#events">Events</a></li>
+          <li><a href="/services.html#business">Business travel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Destinations</h4>
+        <ul>
+          <li><a href="/destinations.html#monaco">Monaco &amp; Monte-Carlo</a></li>
+          <li><a href="/destinations.html#cannes">Cannes</a></li>
+          <li><a href="/destinations.html#saint-tropez">Saint-Tropez</a></li>
+          <li><a href="/destinations.html#eze">Èze &amp; the Corniches</a></li>
+          <li><a href="/destinations.html#provence">Provence &amp; vineyards</a></li>
+          <li><a href="/destinations.html#italy">Italian Riviera</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Book</h4>
+        <ul>
+          <li><a href="tel:+33614703077">+33 6 14 70 30 77</a></li>
+          <li><a href="https://wa.me/33614703077" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="/book.html">Booking form</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/reviews.html">Reviews</a></li>
+          <li><a href="/about.html">About Franck</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="mb-0">&copy; <span data-year>2026</span> Mr. Franck &middot; Private driver, French Riviera &middot; Licensed VTC operator, France</p>
+      <p class="mb-0">English &amp; French spoken &middot; Serving Alpes-Maritimes, Var &amp; Monaco</p>
+    </div>
+  </div>
+</footer>
+
+<div class="actionbar">
+  <a class="btn btn--dark btn--sm" href="tel:+33614703077">Call</a>
+  <a class="btn btn--wa btn--sm" href="https://wa.me/33614703077" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn--primary btn--sm" href="#main">Booking form</a>
+</div>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

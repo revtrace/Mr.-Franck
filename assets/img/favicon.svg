@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="#0d151d"/>
+  <path d="M8 46c6-1 10-4 14-9 3-4 5-8 10-8s7 4 10 8c4 5 8 8 14 9v10H8Z" fill="#132430"/>
+  <circle cx="44" cy="20" r="6" fill="#ddbd7d"/>
+  <text x="32" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="26"
+        font-weight="600" fill="#f7f2e9" text-anchor="middle" letter-spacing="1">F</text>
+</svg>

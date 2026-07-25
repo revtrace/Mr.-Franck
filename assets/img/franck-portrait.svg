@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Portrait placeholder — replace with a photograph of Franck" preserveAspectRatio="xMidYMid slice">
+<title>Portrait placeholder — replace with a photograph of Franck</title>
+<defs>
+<linearGradient id="sky_franck-portrait_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#101c26"/>
+<stop offset="0.55" stop-color="#22394a"/>
+<stop offset="1" stop-color="#4a5b63"/>
+</linearGradient>
+<linearGradient id="sea_franck-portrait_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#2a4552"/>
+<stop offset="1" stop-color="#101c26"/>
+</linearGradient>
+<radialGradient id="glow_franck-portrait_svg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e3c391" stop-opacity=".85"/><stop offset="0.45" stop-color="#e3c391" stop-opacity=".22"/><stop offset="1" stop-color="#e3c391" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="800" height="1000" fill="url(#sky_franck-portrait_svg)"/>
+<circle cx="560" cy="340" r="420" fill="url(#glow_franck-portrait_svg)"/>
+<circle cx="560" cy="340" r="45" fill="#e3c391" opacity=".9"/>
+<rect y="640" width="800" height="360" fill="url(#sea_franck-portrait_svg)"/>
+<rect x="532" y="646" width="50" height="1.4" rx="0.7" fill="#e3c391" opacity="0.19"/>
+<rect x="532" y="678" width="149" height="1.4" rx="0.7" fill="#e3c391" opacity="0.17"/>
+<rect x="494" y="717" width="175" height="1.4" rx="0.7" fill="#e3c391" opacity="0.16"/>
+<rect x="504" y="761" width="174" height="1.4" rx="0.7" fill="#e3c391" opacity="0.14"/>
+<rect x="479" y="795" width="125" height="1.4" rx="0.7" fill="#e3c391" opacity="0.12"/>
+<rect x="522" y="825" width="112" height="1.4" rx="0.7" fill="#e3c391" opacity="0.11"/>
+<rect x="536" y="863" width="116" height="1.4" rx="0.7" fill="#e3c391" opacity="0.09"/>
+<rect x="467" y="886" width="101" height="1.4" rx="0.7" fill="#e3c391" opacity="0.08"/>
+<rect x="524" y="926" width="103" height="1.4" rx="0.7" fill="#e3c391" opacity="0.06"/>
+<rect x="451" y="964" width="149" height="1.4" rx="0.7" fill="#e3c391" opacity="0.05"/>
+<path d="M -20 1020 L -20 640.0 C 30.8 640.0 30.8 600.8 61.5 600.8 C 92.3 600.8 92.3 574.7 123.1 574.7 C 153.8 574.7 153.8 546.3 184.6 546.3 C 215.4 546.3 215.4 547.2 246.2 547.2 C 276.9 547.2 276.9 522.5 307.7 522.5 C 338.5 522.5 338.5 627.8 369.2 627.8 C 400.0 627.8 400.0 562.3 430.8 562.3 C 461.5 562.3 461.5 520.7 492.3 520.7 C 523.1 520.7 523.1 555.0 553.8 555.0 C 584.6 555.0 584.6 549.0 615.4 549.0 C 646.2 549.0 646.2 622.2 676.9 622.2 C 707.7 622.2 707.7 611.2 738.5 611.2 C 769.2 611.2 769.2 640.0 800.0 640.0 L 820 640.0 L 820 1020 Z" fill="#132430" opacity="0.9"/>
+<path d="M -20 1020 L -20 760.0 C 30.8 760.0 30.8 696.0 61.5 696.0 C 92.3 696.0 92.3 730.3 123.1 730.3 C 153.8 730.3 153.8 649.6 184.6 649.6 C 215.4 649.6 215.4 620.0 246.2 620.0 C 276.9 620.0 276.9 618.6 307.7 618.6 C 338.5 618.6 338.5 679.4 369.2 679.4 C 400.0 679.4 400.0 670.8 430.8 670.8 C 461.5 670.8 461.5 621.8 492.3 621.8 C 523.1 621.8 523.1 606.6 553.8 606.6 C 584.6 606.6 584.6 657.4 615.4 657.4 C 646.2 657.4 646.2 690.1 676.9 690.1 C 707.7 690.1 707.7 724.8 738.5 724.8 C 769.2 724.8 769.2 760.0 800.0 760.0 L 820 760.0 L 820 1020 Z" fill="#0a141c" opacity="1.0"/>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-label="Saint-Paul-de-Vence" preserveAspectRatio="xMidYMid slice">
+<title>Saint-Paul-de-Vence</title>
+<defs>
+<linearGradient id="sky_dest-saint-paul_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#12141c"/>
+<stop offset="0.5" stop-color="#2f3d4e"/>
+<stop offset="1" stop-color="#7f8474"/>
+</linearGradient>
+<linearGradient id="sea_dest-saint-paul_svg" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#2f3d4e"/>
+<stop offset="1" stop-color="#12141c"/>
+</linearGradient>
+<radialGradient id="glow_dest-saint-paul_svg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#efd6a6" stop-opacity=".85"/><stop offset="0.45" stop-color="#efd6a6" stop-opacity=".22"/><stop offset="1" stop-color="#efd6a6" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="900" fill="url(#sky_dest-saint-paul_svg)"/>
+<circle cx="202" cy="187" r="0.9" fill="#fff" opacity="0.26"/>
+<circle cx="555" cy="457" r="1.2" fill="#fff" opacity="0.06"/>
+<circle cx="131" cy="227" r="0.8" fill="#fff" opacity="0.26"/>
+<circle cx="862" cy="249" r="1.3" fill="#fff" opacity="0.26"/>
+<circle cx="688" cy="341" r="0.6" fill="#fff" opacity="0.19"/>
+<circle cx="189" cy="227" r="1.5" fill="#fff" opacity="0.19"/>
+<circle cx="284" cy="32" r="1.0" fill="#fff" opacity="0.15"/>
+<circle cx="123" cy="426" r="1.4" fill="#fff" opacity="0.13"/>
+<circle cx="38" cy="85" r="1.0" fill="#fff" opacity="0.38"/>
+<circle cx="200" cy="487" r="0.9" fill="#fff" opacity="0.05"/>
+<circle cx="565" cy="149" r="1.3" fill="#fff" opacity="0.42"/>
+<circle cx="731" cy="349" r="0.7" fill="#fff" opacity="0.21"/>
+<circle cx="666" cy="427" r="1.0" fill="#fff" opacity="0.07"/>
+<circle cx="711" cy="363" r="1.3" fill="#fff" opacity="0.16"/>
+<circle cx="870" cy="292" r="1.1" fill="#fff" opacity="0.09"/>
+<circle cx="869" cy="276" r="0.8" fill="#fff" opacity="0.13"/>
+<circle cx="319" cy="285" r="0.6" fill="#fff" opacity="0.17"/>
+<circle cx="656" cy="83" r="1.4" fill="#fff" opacity="0.23"/>
+<circle cx="415" cy="67" r="1.4" fill="#fff" opacity="0.14"/>
+<circle cx="231" cy="253" r="1.0" fill="#fff" opacity="0.19"/>
+<circle cx="488" cy="387" r="1.4" fill="#fff" opacity="0.06"/>
+<circle cx="423" cy="391" r="1.4" fill="#fff" opacity="0.14"/>
+<circle cx="606" cy="50" r="0.6" fill="#fff" opacity="0.24"/>
+<circle cx="740" cy="290" r="1.4" fill="#fff" opacity="0.10"/>
+<circle cx="217" cy="431" r="1.1" fill="#fff" opacity="0.05"/>
+<circle cx="869" cy="156" r="1.4" fill="#fff" opacity="0.24"/>
+<circle cx="859" cy="242" r="1.4" fill="#fff" opacity="0.30"/>
+<circle cx="763" cy="153" r="1.0" fill="#fff" opacity="0.41"/>
+<circle cx="206" cy="412" r="1.3" fill="#fff" opacity="0.13"/>
+<circle cx="513" cy="24" r="1.5" fill="#fff" opacity="0.48"/>
+<circle cx="202" cy="436" r="1.4" fill="#fff" opacity="0.04"/>
+<circle cx="812" cy="41" r="0.7" fill="#fff" opacity="0.51"/>
+<circle cx="608" cy="158" r="1.2" fill="#fff" opacity="0.26"/>
+<circle cx="408" cy="268" r="0.6" fill="#fff" opacity="0.14"/>
+<circle cx="177" cy="135" r="0.6" fill="#fff" opacity="0.43"/>
+<circle cx="860" cy="237" r="1.0" fill="#fff" opacity="0.14"/>
+<circle cx="531" cy="131" r="0.5" fill="#fff" opacity="0.13"/>
+<circle cx="784" cy="484" r="0.9" fill="#fff" opacity="0.02"/>
+<circle cx="171" cy="209" r="1.4" fill="#fff" opacity="0.31"/>
+<circle cx="269" cy="78" r="1.5" fill="#fff" opacity="0.22"/>
+<circle cx="488" cy="220" r="1.3" fill="#fff" opacity="0.15"/>
+<circle cx="8" cy="37" r="0.9" fill="#fff" opacity="0.17"/>
+<circle cx="322" cy="260" r="1.4" fill="#fff" opacity="0.16"/>
+<circle cx="470" cy="448" r="0.7" fill="#fff" opacity="0.04"/>
+<circle cx="297" cy="438" r="1.3" fill="#fff" opacity="0.09"/>
+<circle cx="853" cy="85" r="0.7" fill="#fff" opacity="0.25"/>
+<circle cx="690" cy="460" r="378" fill="url(#glow_dest-saint-paul_svg)"/>
+<circle cx="690" cy="460" r="40" fill="#efd6a6" opacity=".9"/>
+<rect y="610" width="900" height="290" fill="url(#sea_dest-saint-paul_svg)"/>
+<rect x="620" y="616" width="180" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.19"/>
+<rect x="652" y="655" width="158" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.17"/>
+<rect x="605" y="700" width="135" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.14"/>
+<rect x="598" y="732" width="93" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.12"/>
+<rect x="716" y="752" width="46" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.11"/>
+<rect x="669" y="795" width="141" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.09"/>
+<rect x="580" y="829" width="187" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.07"/>
+<rect x="656" y="850" width="147" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.06"/>
+<rect x="576" y="880" width="131" height="1.4" rx="0.7" fill="#efd6a6" opacity="0.04"/>
+<path d="M -20 920 L -20 610.0 C 34.6 610.0 34.6 553.9 69.2 553.9 C 103.8 553.9 103.8 552.8 138.5 552.8 C 173.1 552.8 173.1 511.4 207.7 511.4 C 242.3 511.4 242.3 472.1 276.9 472.1 C 311.5 472.1 311.5 508.1 346.2 508.1 C 380.8 508.1 380.8 476.4 415.4 476.4 C 450.0 476.4 450.0 477.2 484.6 477.2 C 519.2 477.2 519.2 467.8 553.8 467.8 C 588.5 467.8 588.5 594.1 623.1 594.1 C 657.7 594.1 657.7 572.1 692.3 572.1 C 726.9 572.1 726.9 513.7 761.5 513.7 C 796.2 513.7 796.2 560.1 830.8 560.1 C 865.4 560.1 865.4 610.0 900.0 610.0 L 920 610.0 L 920 920 Z" fill="#12141c" opacity="0.72"/>
+<path d="M -20 920 L -20 685.0 C 34.6 685.0 34.6 671.2 69.2 671.2 C 103.8 671.2 103.8 635.0 138.5 635.0 C 173.1 635.0 173.1 543.5 207.7 543.5 C 242.3 543.5 242.3 514.7 276.9 514.7 C 311.5 514.7 311.5 547.9 346.2 547.9 C 380.8 547.9 380.8 536.8 415.4 536.8 C 450.0 536.8 450.0 499.1 484.6 499.1 C 519.2 499.1 519.2 487.9 553.8 487.9 C 588.5 487.9 588.5 516.0 623.1 516.0 C 657.7 516.0 657.7 547.9 692.3 547.9 C 726.9 547.9 726.9 606.5 761.5 606.5 C 796.2 606.5 796.2 649.2 830.8 649.2 C 865.4 649.2 865.4 685.0 900.0 685.0 L 920 685.0 L 920 920 Z" fill="#12141c" opacity="0.88"/>
+<path d="M -20 920 L -20 795.0 C 34.6 795.0 34.6 746.7 69.2 746.7 C 103.8 746.7 103.8 662.2 138.5 662.2 C 173.1 662.2 173.1 653.9 207.7 653.9 C 242.3 653.9 242.3 579.7 276.9 579.7 C 311.5 579.7 311.5 706.2 346.2 706.2 C 380.8 706.2 380.8 568.9 415.4 568.9 C 450.0 568.9 450.0 755.7 484.6 755.7 C 519.2 755.7 519.2 692.9 553.8 692.9 C 588.5 692.9 588.5 691.9 623.1 691.9 C 657.7 691.9 657.7 669.4 692.3 669.4 C 726.9 669.4 726.9 784.6 761.5 784.6 C 796.2 784.6 796.2 760.7 830.8 760.7 C 865.4 760.7 865.4 795.0 900.0 795.0 L 920 795.0 L 920 920 Z" fill="#060c12" opacity="1.0"/>
+</svg>

@@ -1,0 +1,62 @@
+# Deployment config for Netlify (Cloudflare Pages users: see README.md).
+# The site is static — there is no build step.
+
+[build]
+  publish = "."
+  command = ""
+
+# Pretty URLs: /services works as well as /services.html
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/destinations"
+  to = "/destinations.html"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/reviews"
+  to = "/reviews.html"
+  status = 301
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq.html"
+  status = 301
+
+[[redirects]]
+  from = "/book"
+  to = "/book.html"
+  status = 301
+
+# Legacy Squarespace paths — keep any inbound links and rankings alive.
+[[redirects]]
+  from = "/contact"
+  to = "/book.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact-1"
+  to = "/book.html"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
