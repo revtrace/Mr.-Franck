@@ -48,9 +48,33 @@ high-value, heavily-searched, and English-speaking by default.
 distance — the thing people are actually searching for, and something
 Squarespace's template never surfaced.
 
-**SEO and technical.** Unique titles and meta descriptions per page,
-`TaxiService` and `FAQPage` structured data, a sitemap, `robots.txt`, semantic
-headings, and 301 redirects preserving the old `/contact` and `/contact-1` URLs.
+**SEO.** Unique titles and meta descriptions per page; a `@graph` of
+`LocalBusiness`/`TaxiService`, `Person`, `WebSite`, `OfferCatalog`,
+`AggregateRating` and `Review` structured data; `Service`, `BreadcrumbList` and
+`FAQPage` markup on route pages; a generated sitemap; semantic headings; and 301
+redirects preserving the old `/contact` and `/contact-1` URLs.
+
+**Route landing pages.** `nice-airport-to-monaco`, `-cannes` and
+`-saint-tropez` — because people search the route, not the category. Generated
+from `content/routes.json`, each with real journey detail, an honest comparison
+against the train/bus/taxi, and route-specific FAQs.
+
+**Local search.** `areaServed` covering every town he works, a `GeoCircle`
+service area centred on Nice Airport, and consistent name/phone/area details
+across every page, linked to the Google Business Profile via `sameAs`.
+
+**GEO (generative engine optimisation).** An `llms.txt` giving assistants a
+clean, quotable summary — who, what, where, prices, journey times — plus a
+`robots.txt` that explicitly welcomes GPTBot, ClaudeBot, PerplexityBot,
+Google-Extended and the rest. "Who's a good English-speaking driver for Nice
+airport?" is now an assistant question, and being readable is how you get cited
+in the answer. The comparison tables and Q&A formatting are the shapes these
+engines lift most readily.
+
+**Social previews.** A real 1200×630 JPEG card (`tools/build-og-image.py`).
+The previous SVG `og:image` would have shared as no image at all on WhatsApp,
+Facebook, LinkedIn and iMessage — which matters when WhatsApp is the main
+booking channel.
 
 **Performance and accessibility.** A single ~31KB stylesheet, a ~6KB script, SVG
 imagery, no third-party scripts or trackers — about 330KB for the whole site.
@@ -85,8 +109,14 @@ services.html         Airport · cruise · excursions · hourly · events · bus
 destinations.html     Route table with journey times + destination guides
 about.html            Franck, credentials, how he works
 reviews.html          Testimonials (placeholders — see CONTENT-TODO.md)
+nice-airport-to-*.html   Route landing pages (generated — see content/routes.json)
+llms.txt              Summary for AI assistants and answer engines
 content/reviews.json  Review data — the only file to edit when reviews change
-tools/build-reviews.mjs  Renders that data into reviews.html and index.html
+content/routes.json   Route landing page data — add a route, run the build
+tools/build-reviews.mjs  Renders reviews into reviews.html and index.html
+tools/build-routes.mjs   Generates route pages, sitemap.xml, destination links
+tools/build-images.py    Photos → cropped, compressed WebP + JPEG
+tools/build-og-image.py  Generates the 1200×630 social preview card
 faq.html              Prices, arrivals, the car, booking (+ FAQPage schema)
 book.html             Booking form with WhatsApp fallback
 thank-you.html        Post-submission page

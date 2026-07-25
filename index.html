@@ -12,7 +12,11 @@
 <meta property="og:title" content="Private Driver on the French Riviera — Mr. Franck">
 <meta property="og:description" content="Fixed-price airport transfers and day trips across the Côte d'Azur with a licensed, English-speaking driver. Over a decade on these roads.">
 <meta property="og:url" content="https://www.mrfranck.com/">
-<meta property="og:image" content="https://www.mrfranck.com/assets/img/hero-riviera.svg">
+<meta property="og:image" content="https://www.mrfranck.com/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mr. Franck — private driver of the French Riviera">
+<meta name="twitter:image" content="https://www.mrfranck.com/assets/img/og-image.jpg">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0d151d">
@@ -28,44 +32,108 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TaxiService",
-  "@id": "https://www.mrfranck.com/#business",
-  "name": "Mr. Franck — Private Driver of the French Riviera",
-  "description": "Licensed, English-speaking private driver serving Nice, Cannes, Monaco, Antibes, Saint-Tropez and the wider Côte d'Azur. Airport and cruise-port transfers, day trips and hourly hire at fixed, pre-agreed prices.",
-  "url": "https://www.mrfranck.com/",
-  "telephone": "+33614703077",
-  "image": "https://www.mrfranck.com/assets/img/hero-riviera.svg",
-  "priceRange": "€€€",
-  "currenciesAccepted": "EUR",
-  "areaServed": [
-    { "@type": "City", "name": "Nice" },
-    { "@type": "City", "name": "Cannes" },
-    { "@type": "City", "name": "Monaco" },
-    { "@type": "City", "name": "Antibes" },
-    { "@type": "City", "name": "Saint-Tropez" },
-    { "@type": "City", "name": "Villefranche-sur-Mer" },
-    { "@type": "City", "name": "Menton" },
-    { "@type": "AdministrativeArea", "name": "Provence-Alpes-Côte d'Azur" }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Provence-Alpes-Côte d'Azur",
-    "addressCountry": "FR"
-  },
-  "availableLanguage": [
-    { "@type": "Language", "name": "English" },
-    { "@type": "Language", "name": "French" }
-  ],
-  "knowsLanguage": ["en", "fr"],
-  "sameAs": ["https://maps.app.goo.gl/KxWfuFHCHUpErrmb9"],
-  "serviceType": [
-    "Airport transfer",
-    "Cruise port transfer",
-    "Private day tour",
-    "Chauffeur hire by the hour"
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "TaxiService"],
+      "@id": "https://www.mrfranck.com/#business",
+      "name": "Mr. Franck — Private Driver of the French Riviera",
+      "alternateName": "Mr Franck",
+      "description": "Licensed, English-speaking private driver serving Nice, Cannes, Monaco, Antibes, Saint-Tropez and the wider Côte d'Azur. Airport and cruise-port transfers, day trips and hourly hire at fixed, pre-agreed prices.",
+      "url": "https://www.mrfranck.com/",
+      "telephone": "+33614703077",
+      "image": "https://www.mrfranck.com/assets/img/og-image.jpg",
+      "logo": "https://www.mrfranck.com/assets/img/og-image.jpg",
+      "priceRange": "€€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card",
+      "founder": { "@id": "https://www.mrfranck.com/#franck" },
+      "employee": { "@id": "https://www.mrfranck.com/#franck" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Provence-Alpes-Côte d'Azur",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Nice" },
+        { "@type": "City", "name": "Cannes" },
+        { "@type": "City", "name": "Monaco" },
+        { "@type": "City", "name": "Antibes" },
+        { "@type": "City", "name": "Saint-Tropez" },
+        { "@type": "City", "name": "Villefranche-sur-Mer" },
+        { "@type": "City", "name": "Èze" },
+        { "@type": "City", "name": "Menton" },
+        { "@type": "City", "name": "Saint-Paul-de-Vence" },
+        { "@type": "AdministrativeArea", "name": "Alpes-Maritimes" },
+        { "@type": "AdministrativeArea", "name": "Var" },
+        { "@type": "AdministrativeArea", "name": "Provence-Alpes-Côte d'Azur" }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.6584,
+          "longitude": 7.2159,
+          "name": "Nice Côte d'Azur Airport"
+        },
+        "geoRadius": "120000"
+      },
+      "availableLanguage": [
+        { "@type": "Language", "name": "English" },
+        { "@type": "Language", "name": "French" }
+      ],
+      "knowsLanguage": ["en", "fr"],
+      "sameAs": ["https://maps.app.goo.gl/KxWfuFHCHUpErrmb9"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Private driver services on the French Riviera",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airport transfer", "description": "Private transfers to and from Nice Côte d'Azur, Marseille, Toulon-Hyères and Genoa airports, with flight tracking and meet-and-greet inside arrivals." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cruise port transfer and shore day", "description": "Collection at Villefranche-sur-Mer, Cannes, Monaco and Marseille, planned backwards from the all-aboard time." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private day trip", "description": "Bespoke excursions to Monaco, Èze, Saint-Tropez, the Provence vineyards and the Italian Riviera." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chauffeur hire by the hour, half day or full day", "description": "The car and driver reserved for a block of time, with the itinerary changeable during the day." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Event and wedding transport", "description": "Driving for the Cannes Film Festival, the Monaco Grand Prix, the Yacht Show and private events." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business travel", "description": "Corporate transfers between Sophia Antipolis, Monaco, Nice and the airport, with itemised invoicing." } }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.mrfranck.com/#franck",
+      "name": "Franck Auger",
+      "jobTitle": "Private driver",
+      "description": "Licensed French VTC driver with over a decade of experience on the Côte d'Azur. Fluent in English and French.",
+      "knowsLanguage": ["en", "fr"],
+      "worksFor": { "@id": "https://www.mrfranck.com/#business" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.mrfranck.com/#website",
+      "url": "https://www.mrfranck.com/",
+      "name": "Mr. Franck — Private Driver of the French Riviera",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://www.mrfranck.com/#business" }
+    }
   ]
 }
 </script>
+<!-- Aggregate rating is generated from content/reviews.json by
+     tools/build-reviews.mjs, so it can never drift from the figure shown
+     in the trust bar. Do not hand-edit. -->
+<!-- RATING-SCHEMA:START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://www.mrfranck.com/#business",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": 20,
+    "bestRating": 5,
+    "worstRating": 1
+  }
+}
+</script>
+<!-- RATING-SCHEMA:END -->
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -365,7 +433,7 @@
       </div>
 
       <div class="routes">
-        <a class="route" href="/book.html?service=Airport%20transfer&amp;pickup=Nice%20C%C3%B4te%20d%27Azur%20Airport%20(NCE)&amp;dropoff=Cannes">
+        <a class="route" href="/nice-airport-to-cannes.html">
           <div>
             <p class="route__name">Nice Airport &rarr; Cannes</p>
             <p class="route__meta"><span>approx. 30&ndash;40 min</span><span>27 km</span><span>Croisette, Palais des Festivals, port</span></p>
@@ -373,7 +441,7 @@
           <div class="route__fare"><strong>Fixed price</strong>quoted before you book</div>
         </a>
 
-        <a class="route" href="/book.html?service=Airport%20transfer&amp;pickup=Nice%20C%C3%B4te%20d%27Azur%20Airport%20(NCE)&amp;dropoff=Monaco">
+        <a class="route" href="/nice-airport-to-monaco.html">
           <div>
             <p class="route__name">Nice Airport &rarr; Monaco</p>
             <p class="route__meta"><span>approx. 35&ndash;50 min</span><span>32 km</span><span>Monte-Carlo, Port Hercule, Fontvieille</span></p>
@@ -397,7 +465,7 @@
           <div class="route__fare"><strong>Fixed price</strong>quoted before you book</div>
         </a>
 
-        <a class="route" href="/book.html?service=Airport%20transfer&amp;pickup=Nice%20C%C3%B4te%20d%27Azur%20Airport%20(NCE)&amp;dropoff=Saint-Tropez">
+        <a class="route" href="/nice-airport-to-saint-tropez.html">
           <div>
             <p class="route__name">Nice Airport &rarr; Saint-Tropez</p>
             <p class="route__meta"><span>approx. 1 h 30&ndash;2 h 30</span><span>115 km</span><span>Traffic-dependent in summer &mdash; Franck plans around it</span></p>

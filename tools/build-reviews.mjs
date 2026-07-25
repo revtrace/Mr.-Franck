@@ -141,28 +141,61 @@ const agg = data.aggregate;
 }
 
 if (agg && agg.ratingValue && agg.reviewCount) {
+  // Attaches to the business entity by @id, so it merges with the fuller
+  // LocalBusiness graph on the home page rather than duplicating it.
   const ld = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
     '@id': 'https://www.mrfranck.com/#business',
-    name: 'Mr. Franck — Private Driver of the French Riviera',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: agg.ratingValue,
       reviewCount: agg.reviewCount,
-      bestRating: 5
-    }
+      bestRating: 5,
+      worstRating: 1
+    },
+    review: reviews.slice(0, 10).map((r) => ({
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
+      author: { '@type': 'Person', name: r.name },
+      reviewBody: r.text,
+      ...(r.source ? { publisher: { '@type': 'Organization', name: r.source } } : {})
+    }))
   };
   const block = `<script type="application/ld+json">\n${JSON.stringify(ld, null, 2)}\n</script>`;
-  const file = path.join(root, 'reviews.html');
-  let html = fs.readFileSync(file, 'utf8');
-  if (html.includes('"aggregateRating"')) {
-    html = html.replace(/<script type="application\/ld\+json">[\s\S]*?aggregateRating[\s\S]*?<\/script>/, block);
-  } else {
-    html = html.replace('</head>', block + '\n</head>');
+
+  // reviews.html — full block with the individual reviews
+  {
+    const file = path.join(root, 'reviews.html');
+    let html = fs.readFileSync(file, 'utf8');
+    if (html.includes('"aggregateRating"')) {
+      html = html.replace(/<script type="application\/ld\+json">[\s\S]*?aggregateRating[\s\S]*?<\/script>/, block);
+    } else {
+      html = html.replace('</head>', block + '\n</head>');
+    }
+    fs.writeFileSync(file, html);
+    console.log(`  ✓ reviews.html — aggregate rating ${agg.ratingValue} from ${agg.reviewCount} reviews, ${ld.review.length} Review nodes`);
   }
-  fs.writeFileSync(file, html);
-  console.log(`  ✓ reviews.html — aggregate rating ${agg.ratingValue} from ${agg.reviewCount} reviews`);
+
+  // index.html — rating only, between markers
+  {
+    const file = path.join(root, 'index.html');
+    let html = fs.readFileSync(file, 'utf8');
+    const A = '<!-- RATING-SCHEMA:START -->';
+    const B = '<!-- RATING-SCHEMA:END -->';
+    const a = html.indexOf(A);
+    const b = html.indexOf(B);
+    if (a !== -1 && b !== -1) {
+      const short = {
+        '@context': 'https://schema.org',
+        '@id': 'https://www.mrfranck.com/#business',
+        aggregateRating: ld.aggregateRating
+      };
+      const inner = `\n<script type="application/ld+json">\n${JSON.stringify(short, null, 2)}\n</script>\n`;
+      html = html.slice(0, a + A.length) + inner + html.slice(b);
+      fs.writeFileSync(file, html);
+      console.log('  ✓ index.html — aggregate rating attached to the business entity');
+    }
+  }
 } else {
   console.log('  · no "aggregate" figures set, so no star-rating schema was added (correct until they are real)');
 }

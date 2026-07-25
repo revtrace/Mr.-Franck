@@ -159,6 +159,13 @@ hr {
 .grid--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .grid--4 { grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); }
 
+/* Genuinely two columns, unlike .grid--2 which auto-fits to as many as fit.
+   Used where an even 2x2 matters (e.g. the four alternatives on route pages). */
+.grid--2up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 720px) {
+  .grid--2up { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* Booking page: form + sidebar */
 .grid--form {
   grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);

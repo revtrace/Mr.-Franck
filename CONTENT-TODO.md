@@ -188,6 +188,27 @@ France and the EU expect two things this site doesn't yet have:
 Both are short. Add them as `legal.html` and `privacy.html`, and link them from
 the footer's bottom row.
 
+### 9b. SEO follow-ups
+
+The technical work is done. What's left needs either Franck's input or time:
+
+- **More route pages.** Three exist. The pattern is proven and adding one is a
+  JSON entry plus `node tools/build-routes.mjs`. Worth doing next, roughly in
+  order of search demand: Nice Airport → Villefranche (cruise), → Antibes,
+  → Èze, → Menton, and Villefranche cruise port → Monaco. Only add a page if
+  there's genuinely something to say on it — thin duplicated pages hurt.
+- **Verify the transport comparisons.** The notes about trains and airport
+  buses on the route pages are deliberately general because I couldn't reach
+  live timetables from this environment. Before launch, check them against
+  current services and make them more specific — precise, correct detail is
+  exactly what both Google and AI assistants reward.
+- **Google Search Console.** Verify the domain, submit `sitemap.xml`, and
+  watch which route queries actually land. That data should decide which route
+  pages get written next, rather than guesswork.
+- **Refresh `llms.txt` when facts change.** It repeats the key facts — prices,
+  languages, journey times, rating — in the form assistants quote. If the phone
+  number, rating or service area changes, update it along with the pages.
+
 ### 10. A French version
 Franck's market is English-speaking, and this site is built for that market
 deliberately. But a French-language version at `/fr/` would pick up local and
