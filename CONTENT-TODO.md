@@ -12,12 +12,12 @@ else on this list combined.
 
 ## 🔴 Blockers — do not launch without these
 
-### 1. ~~Real reviews~~ ✅ Done — four live, one parked
+### 1. ~~Real reviews~~ ✅ Done
 
-Four verbatim Google reviews are live (Marie De Munck, Jennifer Grais, Brad
-Littlefield, Sigurrós Elín Birgisdóttir). All placeholders are gone. The
-reported rating — **5.0 from 20 reviews** — now appears in the home-page trust
-bar and as `AggregateRating` schema.
+Five verbatim Google reviews are live — Marie De Munck, Jennifer Grais, Brad
+Littlefield, Sigurrós Elín Birgisdóttir and Chris Chen. All placeholders are
+gone. The reported rating, **5.0 from 20 reviews**, appears in the home-page
+trust bar and as `AggregateRating` schema.
 
 To add or change reviews, edit `content/reviews.json` and run:
 
@@ -28,20 +28,19 @@ node tools/build-reviews.mjs
 Never edit the cards in the HTML directly — they're regenerated and your edits
 would be overwritten.
 
-**Two things still outstanding:**
+**One thing still outstanding: verify 5.0 / 20 against the profile before
+launch.** That figure came from a message rather than a direct read, and it's a
+point-in-time number that drifts as reviews come in. It lives in one place — the
+`aggregate` object in `content/reviews.json` — and the build keeps the trust-bar
+tile and the schema in sync from it.
 
-- **A fifth review is parked in `_pending`.** It's an excellent, detailed one
-  (Èze and Monaco, "it became a mini-city tour"), but the reviewer's name was
-  scrolled off the top of the screenshot it came from. Add the name, move the
-  object into the `reviews` array, re-run the build. It's long, so consider
-  trimming to its two strongest sentences — and note "Eza" is Google's
-  mistranslation of Èze, so trim rather than silently correct it, since an
-  edited quote stops being verbatim.
-- **Verify 5.0 / 20 against the profile before launch.** That figure came from
-  a message, not from reading the profile, and it's a point-in-time number that
-  drifts as reviews come in. It lives in one place — the `aggregate` object in
-  `content/reviews.json` — and the build keeps the trust-bar tile and the schema
-  in sync from it.
+**A note on the Chris Chen review.** It's the opening three paragraphs of a
+longer, Google-translated review, quoted contiguously and unaltered; the last
+two paragraphs are simply not carried over. The one edit is `[Èze]` in square
+brackets, because the translation renders it "Eza" — brackets are the standard
+way to show an editorial correction without pretending the original said it.
+The full original is preserved in `_full_original` in the JSON; copy it over
+`text` and rebuild to publish the whole thing.
 
 **One honest caveat on the star rating.** Google treats reviews about a business
 republished on that business's own site as "self-serving", and generally will
