@@ -1,171 +1,60 @@
 # mrfranck.com
 
-A rebuild of the website for **Mr. Franck** — Franck Auger, licensed private
-driver on the French Riviera — replacing the existing Squarespace site.
-
-Static HTML, CSS and vanilla JS. No framework, no build step, no dependencies.
-Open `index.html` and it works.
-
----
-
-## What changed, and why
-
-The old Squarespace site said the right things but left the visitor with work to
-do. The rebuild keeps its meaning — private driver, French Riviera, over a decade
-of experience, fluent English, airport transfers and excursions from Nice to
-Monaco, Cannes and Saint-Tropez — and rebuilds it around how an English-speaking
-traveller actually decides.
-
-**Positioning.** From *"Private Driver of the French Riviera"* (a description) to
-**"The Riviera, without the driving"** (a reason to book). The site now argues a
-case rather than listing services.
-
-**The four objections, answered head-on.** Every visitor is silently asking the
-same things: what will this cost me, who is going to turn up, will they speak
-English, and what happens if my flight is late. Each now has a dedicated,
-findable answer.
-
-**A direct comparison against taxis and Uber.** The real competition isn't other
-chauffeurs, it's *"can't we just get a taxi?"* — so the homepage answers that
-question in a table instead of ignoring it.
-
-**Fixed pricing as the central promise.** Repeated on every page: one flat,
-all-in figure, tolls and parking included, agreed in writing before you travel.
-The single biggest anxiety in this market is the fare surprise.
-
-**WhatsApp as the primary call to action.** How this audience actually contacts a
-driver abroad, with a sticky call/WhatsApp/quote bar on mobile.
-
-**A booking form that ends the back-and-forth.** Flight number, passengers,
-luggage, date, time — captured once, so Franck can quote on the first reply
-instead of the third.
-
-**Segments the old site left on the table.** Cruise shore days (Villefranche,
-Cannes, Monaco) and event weeks (Cannes Film Festival, Monaco Grand Prix) are
-high-value, heavily-searched, and English-speaking by default.
-
-**Routes as content.** Each Nice Airport route lists a realistic journey time and
-distance — the thing people are actually searching for, and something
-Squarespace's template never surfaced.
-
-**SEO.** Unique titles and meta descriptions per page; a `@graph` of
-`LocalBusiness`/`TaxiService`, `Person`, `WebSite`, `OfferCatalog`,
-`AggregateRating` and `Review` structured data; `Service`, `BreadcrumbList` and
-`FAQPage` markup on route pages; a generated sitemap; semantic headings; and 301
-redirects preserving the old `/contact` and `/contact-1` URLs.
-
-**Route landing pages.** `nice-airport-to-monaco`, `-cannes` and
-`-saint-tropez` — because people search the route, not the category. Generated
-from `content/routes.json`, each with real journey detail, an honest comparison
-against the train/bus/taxi, and route-specific FAQs.
-
-**Local search.** `areaServed` covering every town he works, a `GeoCircle`
-service area centred on Nice Airport, and consistent name/phone/area details
-across every page, linked to the Google Business Profile via `sameAs`.
-
-**GEO (generative engine optimisation).** An `llms.txt` giving assistants a
-clean, quotable summary — who, what, where, prices, journey times — plus a
-`robots.txt` that explicitly welcomes GPTBot, ClaudeBot, PerplexityBot,
-Google-Extended and the rest. "Who's a good English-speaking driver for Nice
-airport?" is now an assistant question, and being readable is how you get cited
-in the answer. The comparison tables and Q&A formatting are the shapes these
-engines lift most readily.
-
-**Social previews.** A real 1200×630 JPEG card (`tools/build-og-image.py`).
-The previous SVG `og:image` would have shared as no image at all on WhatsApp,
-Facebook, LinkedIn and iMessage — which matters when WhatsApp is the main
-booking channel.
-
-**Performance and accessibility.** A single ~31KB stylesheet, a ~6KB script, SVG
-imagery, no third-party scripts or trackers — about 330KB for the whole site.
-Keyboard-navigable, visible focus rings, labelled form fields,
-`prefers-reduced-motion` respected, no content hidden behind JavaScript, and all
-text checked to WCAG AA contrast (the brass accent is decorative only; small
-text on light backgrounds uses a darker `--brass-ink`).
-
----
-
-## ⚠️ Before this goes live
-
-Read **[CONTENT-TODO.md](CONTENT-TODO.md)** first.
-
-Reviews are **real and live** — four verbatim from Franck's Google profile, with
-his 5.0 rating in the trust bar. Still needed before launch: **photography**
-(above all a photo of Franck himself), a **form endpoint**, and ideally
-**published prices**. Nothing about a real business — testimonials, prices,
-licence numbers, biography — was invented to fill space.
-
-To change reviews, edit `content/reviews.json` and run
-`node tools/build-reviews.mjs`. It rewrites both pages plus the rating tile and
-schema, and refuses to run on bad data rather than half-publishing.
-
----
-
-## Structure
+A static copy of the Mr. Franck Squarespace site, for hosting on Cloudflare. Same design, same
+text, same pages, same URLs. Nothing loads from Squarespace, so it keeps working after the
+Squarespace subscription is cancelled.
 
 ```
-index.html            Home — the argument, comparison, routes, proof
-services.html         Airport · cruise · excursions · hourly · events · business
-destinations.html     Route table with journey times + destination guides
-about.html            Franck, credentials, how he works
-reviews.html          Testimonials (placeholders — see CONTENT-TODO.md)
-nice-airport-to-*.html   Route landing pages (generated — see content/routes.json)
-llms.txt              Summary for AI assistants and answer engines
-content/reviews.json  Review data — the only file to edit when reviews change
-content/routes.json   Route landing page data — add a route, run the build
-tools/build-reviews.mjs  Renders reviews into reviews.html and index.html
-tools/build-routes.mjs   Generates route pages, sitemap.xml, destination links
-tools/build-images.py    Photos → cropped, compressed WebP + JPEG
-tools/build-og-image.py  Generates the 1200×630 social preview card
-faq.html              Prices, arrivals, the car, booking (+ FAQPage schema)
-book.html             Booking form with WhatsApp fallback
-thank-you.html        Post-submission page
-404.html              Not found
-robots.txt            Crawler directives
-sitemap.xml           Sitemap
-netlify.toml          Hosting config, redirects, security headers, caching
-assets/css/styles.css Design system + all styles
-assets/js/site.js     Nav, accordions, reveals, form fallback
-assets/img/           Generated placeholder artwork (see CONTENT-TODO.md)
+public/              the website: this folder is what gets deployed
+  index.html         /            (Squarespace "home")
+  about.html         /about
+  services.html      /services
+  destinations.html  /destinations
+  reviews.html       /reviews
+  contact.html       /contact     (contact form)
+  contact-1.html     /contact-1   ("Book Now" page and form)
+  404.html           page-not-found
+  assets/            Squarespace's CSS, fonts and logo, the hero video, plus mirror.css / mirror.js
+  _redirects         /home -> /
+  _headers           security and caching headers
+wrangler.jsonc       Cloudflare config (Workers static assets, serves ./public)
+tools/mirror.py      re-creates public/*.html from the live Squarespace site
+tools/fetch-video.sh re-downloads the homepage video
 ```
 
-## Design system
+## What differs from Squarespace
 
-Defined as custom properties at the top of `assets/css/styles.css`.
+- **Heading font.** Squarespace uses Acumin Pro through its own Adobe Fonts licence, which does
+  not transfer. Headings use Archivo instead (free, very similar). With an Adobe Fonts licence for
+  the domain, add your kit's `<link>` to each page and delete the four `@font-face` rules at the
+  top of `public/assets/css/mirror.css`.
+- **Forms.** Squarespace forms only run on Squarespace. Both forms are rebuilt with the same fields,
+  button text and thank-you message, and email each submission through FormSubmit
+  (formsubmit.co). The endpoint is the first line of `public/assets/js/mirror.js`.
+  **The first real submission sends a one-time activation email to mrfranckdriver@gmail.com;
+  someone has to click it before forms are delivered.** Squarespace's reCAPTCHA is replaced by a
+  hidden honeypot field.
+- **No Squarespace extras**: no cookie banner, cart, analytics or newsletter sign-ups. The
+  "Email" fields used to add people to a Squarespace mailing list; that list stays in Squarespace,
+  so export it before cancelling if it matters.
 
-- **Ink** `#0d151d` — near-black navy, the Mediterranean at night
-- **Sand** `#f7f2e9` — warm ivory, Riviera stone
-- **Brass** `#c1994f` — the single accent; used sparingly and always to mean "act"
-- **Sea** `#1d5560` — deep teal, secondary
-- **Type** — Cormorant Garamond for display (editorial, unhurried, expensive),
-  Inter for interface. Both from Google Fonts with `display=swap`; both degrade
-  to good system fallbacks if the network is slow.
+## Deploy to Cloudflare
 
-## Local preview
+1. Cloudflare dashboard → Workers & Pages → Create → Import a repository → pick this repo and
+   branch. Leave the build command empty; the deploy command is `npx wrangler deploy` (it reads
+   `wrangler.jsonc`). Check the site on the `*.workers.dev` URL it gives you.
+2. Move DNS: add `mrfranck.com` to Cloudflare (Websites → Add a domain), then change the
+   nameservers at the registrar. If the domain was bought through Squarespace Domains, the
+   nameservers are changed in the Squarespace domain panel; the registration itself can stay there
+   or be transferred to Cloudflare Registrar later.
+3. In the Worker → Settings → Domains & Routes, add custom domains `www.mrfranck.com` and
+   `mrfranck.com`. Keep `www` as the main one (all canonical links use it) and add a redirect rule
+   from the bare domain to `https://www.mrfranck.com`.
+4. Send a test message through `/contact`, click the FormSubmit activation email, send another.
+5. Only then cancel Squarespace.
 
-```bash
-python3 -m http.server 8000
-# → http://localhost:8000
-```
+## Editing text later
 
-## Deployment
-
-Any static host. Point it at the repository root; there is nothing to build.
-
-- **Netlify** — `netlify.toml` is ready: publish directory `.`, no build
-  command. Redirects, security headers and asset caching are configured.
-- **Cloudflare Pages** — build command empty, output directory `/`. Recreate the
-  redirects from `netlify.toml` in a `_redirects` file.
-- **GitHub Pages** — works, but the root-relative paths (`/assets/...`) require
-  a custom domain or a user/organisation site rather than a project subpath.
-
-After DNS is switched from Squarespace, confirm the two legacy redirects
-(`/contact`, `/contact-1`) resolve, then resubmit the sitemap in Google Search
-Console.
-
-## Contact details in the markup
-
-Franck's number appears as `tel:+33614703077` and `https://wa.me/33614703077`
-throughout. If it ever changes, those two strings plus the displayed
-`+33 6 14 70 30 77` are the only things to update — and the WhatsApp fallback in
-`assets/js/site.js`.
+Edit the HTML in `public/` directly. The markup is Squarespace's, so it is verbose; search for the
+sentence you want to change. Do not re-run `tools/mirror.py` after hand edits: it overwrites the
+pages from the live Squarespace site, and it stops working once that site is gone.

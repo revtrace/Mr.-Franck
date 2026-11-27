@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects. Pretty URLs (/about -> about.html) are automatic.
+/home        /             301
+/index       /             301

@@ -1,0 +1,34 @@
+/* Additions on top of the Squarespace stylesheets copied from the live site. */
+
+/* Headings: Squarespace serves Acumin Pro through its own Adobe Fonts licence, which does not
+   carry over to self-hosting. Archivo (SIL Open Font License) is a close substitute. Declaring it
+   under the family name the theme already uses means no other CSS has to change. */
+@font-face { font-family: "acumin-pro"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("/assets/fonts/archivo-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "acumin-pro"; font-style: italic; font-weight: 500; font-display: swap;
+  src: url("/assets/fonts/archivo-latin-500-italic.woff2") format("woff2"); }
+@font-face { font-family: "acumin-pro"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("/assets/fonts/archivo-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "acumin-pro"; font-style: italic; font-weight: 700; font-display: swap;
+  src: url("/assets/fonts/archivo-latin-700-italic.woff2") format("woff2"); }
+
+/* Contact and booking forms (rebuilt; Squarespace forms only run on Squarespace). */
+.mf-form { display: grid; gap: 1.4rem; font-family: var(--body-font-font-family, "Poppins", sans-serif); }
+.mf-field { display: grid; gap: .45rem; }
+.mf-title { font-size: 1rem; }
+.mf-req { opacity: .6; font-size: .85em; }
+.mf-desc { margin: 0; font-size: .85rem; opacity: .7; }
+.mf-form input, .mf-form textarea {
+  width: 100%; box-sizing: border-box; font: inherit; font-size: 1rem; color: inherit;
+  background: transparent; border: 1px solid currentColor; border-radius: 0; padding: .9rem 1rem;
+}
+.mf-form input:focus, .mf-form textarea:focus { outline: 2px solid currentColor; outline-offset: 1px; }
+.mf-form textarea { resize: vertical; min-height: 8rem; }
+.mf-submit { width: 100%; cursor: pointer; }
+.mf-submit[disabled] { opacity: .6; cursor: wait; }
+.mf-error { margin: 0; color: #b00020; }
+.mf-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+.mf-thanks { font-size: 1.1rem; }
+
+/* Background video fills the block the Squarespace player used to occupy. */
+.native-video-player { overflow: hidden; }
