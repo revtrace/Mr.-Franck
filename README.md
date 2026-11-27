@@ -29,11 +29,11 @@ tools/fetch-video.sh re-downloads the homepage video
   the domain, add your kit's `<link>` to each page and delete the four `@font-face` rules at the
   top of `public/assets/css/mirror.css`.
 - **Forms.** Squarespace forms only run on Squarespace. Both forms are rebuilt with the same fields,
-  button text and thank-you message, and email each submission through FormSubmit
-  (formsubmit.co). The endpoint is the first line of `public/assets/js/mirror.js`.
-  **The first real submission sends a one-time activation email to mrfranckdriver@gmail.com;
-  someone has to click it before forms are delivered.** Squarespace's reCAPTCHA is replaced by a
-  hidden honeypot field.
+  button text and thank-you message, and send each submission through FormSubmit (formsubmit.co)
+  to kris@hutch.agency, copied to mrfranckdriver@gmail.com. Replying to the email replies to the
+  visitor. Recipients are set at the top of `public/assets/js/mirror.js`.
+  **The first real submission sends a one-time activation email to kris@hutch.agency; click it
+  before forms are delivered.** Squarespace's reCAPTCHA is replaced by a hidden honeypot field.
 - **No Squarespace extras**: no cookie banner, cart, analytics or newsletter sign-ups. The
   "Email" fields used to add people to a Squarespace mailing list; that list stays in Squarespace,
   so export it before cancelling if it matters.
@@ -50,7 +50,8 @@ tools/fetch-video.sh re-downloads the homepage video
 3. In the Worker → Settings → Domains & Routes, add custom domains `www.mrfranck.com` and
    `mrfranck.com`. Keep `www` as the main one (all canonical links use it) and add a redirect rule
    from the bare domain to `https://www.mrfranck.com`.
-4. Send a test message through `/contact`, click the FormSubmit activation email, send another.
+4. Send a test message through `/contact`, click the FormSubmit activation email in kris@hutch.agency,
+   send another, and confirm it reaches both inboxes.
 5. Only then cancel Squarespace.
 
 ## Editing text later

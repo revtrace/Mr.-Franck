@@ -1,8 +1,11 @@
 // Replaces the few pieces of Squarespace JavaScript the site actually needs.
 
-// Where form submissions go. FormSubmit emails each submission to this address.
-// The first submission triggers a one-time activation email to this inbox; click the link in it.
-var FORM_ENDPOINT = "https://formsubmit.co/ajax/mrfranckdriver@gmail.com";
+// Where form submissions go. FormSubmit emails each submission to the address in the endpoint
+// and copies the FORM_CC addresses (comma-separated). The first submission sends a one-time
+// activation email to the endpoint address; click the link in it before forms are delivered.
+// Replies go straight to the visitor (their email is sent as _replyto).
+var FORM_ENDPOINT = "https://formsubmit.co/ajax/kris@hutch.agency";
+var FORM_CC = "mrfranckdriver@gmail.com";
 
 (function () {
   // Mobile menu (burger) open/close, same classes Squarespace toggles.
@@ -56,6 +59,7 @@ var FORM_ENDPOINT = "https://formsubmit.co/ajax/mrfranckdriver@gmail.com";
       new FormData(form).forEach(function (v, k) { data[k] = v; });
       var email = form.querySelector('input[type="email"]');
       if (email) data._replyto = email.value;
+      if (FORM_CC) data._cc = FORM_CC;
       fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
